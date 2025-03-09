@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center; /* Align image vertically */
+            justify-content: center;
+        }
+
+        .left-section img {
+            max-width: 100%;
+            height: 500px; /* Increased height */
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .right-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .brand-link {
+            color: #007185;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .brand-link:hover {
+            text-decoration: underline;
+        }
+
+        .rating {
+            font-size: 14px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            background: #232f3e;
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .deal-badge {
+            background: #e74c3c;
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-top: 10px;
+        }
+
+        .old-price {
+            font-size: 18px;
+            color: gray;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .discount {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        .fulfilled {
+            font-size: 14px;
+            background: #ddd;
+            padding: 4px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .delivery {
+            font-size: 16px;
+            color: green;
+            margin: 10px 0;
+        }
+
+        .emi {
+            font-size: 16px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .emi a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .emi a:hover {
+            text-decoration: underline;
+        }
+
+        .buy-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+        }
+
+        .buy-btn {
+            background: #ff9900;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background: #e68a00;
+        }
+
+        .cart-btn {
+            background: #FFD814;
+            color: black;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .cart-btn:hover {
+            background: #F7CA00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section - Product Image -->
+        <div class="left-section">
+            <img src="{%IMAGE%}" alt="Wireless Headphones">
+        </div>
+
+        <!-- Right Section - Product Details -->
+        <div class="right-section">
+            <p class="product-title">{%TITLE%}</p>
+            <a href="#" class="brand-link">Visit the {%BRAND%} Store</a>
+            <p class="rating">{%RATINGS%} | <a href="#" class="brand-link">Search this page</a></p>
+            <span class="badge">Amazon's Choice</span>
+            <p><strong>{%BOUGHT%}</strong> in past month</p>
+
+            <span class="deal-badge">Limited time deal</span>
+            <p><span class="discount">{%DISCOUNT%}</span> <span class="price">{%DISCPRICE%}</span> <span class="old-price">M.R.P: {%ORGPRICE%}</span></p>
+
+            <p class="fulfilled">✔ Fulfilled</p>
+            <p class="delivery">FREE delivery Tomorrow, 10 Mar</p>
+
+            <p class="emi">EMI starts at {%EMI%} per month. <a href="#">EMI options</a></p>
+
+            <!-- Buy Section -->
+            <div class="buy-section">
+                <button class="buy-btn">Buy Now</button>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
