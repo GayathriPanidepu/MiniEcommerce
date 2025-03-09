@@ -58,6 +58,19 @@ npm install
 ```
 
 ### 3️⃣ Run the Server
+
+**before running this project** 
+***use this command***
+```
+npm init -y
+```
+**after that go to package.json file and there change the script attribute as scripts{ 'start':'nodemon index.js' }**
+
+**Now you can directly use**
+```
+npm start
+```
+
 ```sh
 nodemon index.js
 ```
